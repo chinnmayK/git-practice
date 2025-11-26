@@ -1,114 +1,160 @@
-Git & Docker Practice
+---
+
+# Git & Docker Practice
 
 This repository documents the work completed for practicing Git workflows and Docker basics, including branching, pull requests, merge conflict resolution, containerization, and publishing Docker images.
 
-✅ Git Tasks Completed
-1. Create GitHub Repository
+---
 
-Go to GitHub and create a new repository named git-practice
+## ✅ Git Tasks Completed
 
-Initialize it with a README.md
+### 1. Create GitHub Repository
 
-2. Clone the Repository
+* Create a new GitHub repository named **git-practice**
+* Initialize it with a `README.md`
+
+---
+
+### 2. Clone the Repository
+
+```bash
 git clone https://github.com/<your-username>/git-practice.git
 cd git-practice
+```
 
-3. Create and Work on Branches
-Create a feature branch
+---
+
+### 3. Create and Work on Branches
+
+#### Create a feature branch:
+
+```bash
 git checkout -b feature1
+```
 
-Make changes, commit, and push
+#### Make changes, commit, and push:
+
+```bash
 git add .
 git commit -m "Add feature 1"
 git push -u origin feature1
+```
 
-4. Create Pull Request and Merge
+---
 
-Open a Pull Request (PR) on GitHub
+### 4. Create Pull Request and Merge
 
-Review the changes
+* Open a Pull Request (PR) on GitHub
+* Review the changes
+* Merge the PR into the `main` branch
 
-Merge the PR into the main branch
+---
 
-5. Practice Merge Conflict
-Create another branch
-git checkout -b feature2
+### 5. Practice Merge Conflict
 
-Steps followed:
+#### Steps followed:
 
-Modify the same line in README.md
+1. Create another branch:
 
-Push branch and create a PR
+   ```bash
+   git checkout -b feature2
+   ```
 
-GitHub detects a merge conflict
+2. Modify the same line in `README.md`.
 
-Resolve conflict using GitHub's conflict editor
+3. Push the branch and create a PR.
 
-Choose the final combined text
+4. GitHub detects a merge conflict.
 
-Mark as resolved and merge successfully
+5. Resolve conflict using GitHub’s conflict editor:
 
-6. Sync Local Repository
+   * Choose the final combined text
+   * Mark as resolved
+   * Merge successfully
+
+---
+
+### 6. Sync Local Repository
+
+```bash
 git checkout main
 git pull
+```
 
-✅ Docker Tasks Completed
-1. Learned Docker Basics
+---
+
+## ✅ Docker Tasks Completed
+
+### 1. Learned Docker Basics
 
 Understood the following concepts:
 
-Images vs Containers
+* **Images vs Containers**
+* Common Docker commands:
 
-Common Docker commands:
+  * `docker build`
+  * `docker run`
+  * `docker ps`
+  * `docker images`
+  * `docker push`
 
-docker build
+---
 
-docker run
+### 2. Dockerized a Python Application
 
-docker ps
-
-docker images
-
-docker push
-
-2. Dockerized a Python Application
 Created the following files:
 
-app.py (Flask web app)
+* `app.py` (Flask web app)
+* `requirements.txt`
+* `Dockerfile`
 
-requirements.txt
+#### Build Docker image:
 
-Dockerfile
-
-Build Docker image
+```bash
 docker build -t chinnmayk/python-docker-demo:v1 .
+```
 
-Run the container
+#### Run the container:
+
+```bash
 docker run -p 5000:5000 chinnmayk/python-docker-demo:v1
+```
 
-3. Push Docker Image to Docker Hub
-Login
+---
+
+### 3. Push Docker Image to Docker Hub
+
+#### Login:
+
+```bash
 docker login
+```
 
-Tag image (if required)
+#### Tag image (if required):
+
+```bash
 docker tag python-docker-demo:v1 chinnmayk/python-docker-demo:v1
+```
 
-Push to Docker Hub
+#### Push to Docker Hub:
+
+```bash
 docker push chinnmayk/python-docker-demo:v1
+```
 
-✅ Tools Used
+---
 
-Git
+## ✅ Tools Used
 
-GitHub
+* Git
+* GitHub
+* Docker Desktop
+* Docker Hub
+* Git Bash
 
-Docker Desktop
+---
 
-Docker Hub
-
-Git Bash
-
-✅ Summary
+## ✅ Summary
 
 In this practice, the following skills were demonstrated:
 
@@ -118,3 +164,5 @@ In this practice, the following skills were demonstrated:
 ✔ Containerizing a Python application using Docker
 ✔ Building and running Docker images locally
 ✔ Publishing Docker images to Docker Hub
+
+---
